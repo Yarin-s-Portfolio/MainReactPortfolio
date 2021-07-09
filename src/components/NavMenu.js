@@ -112,7 +112,6 @@ function NavMenu() {
         </div>
         <li>
           <NavLink
-            exact
             to="/"
             onClick={() => setShowNav(!showNav)}
             role="button"

@@ -21,7 +21,7 @@ const ButtonStyle = styled.div`
   }
 `;
 
-function Button({ btnLink, btnText, outline }) {
+function Button({ btnLink = '#', btnText = 'Button', outline = false }) {
   return (
     <ButtonStyle outline={outline}>
       <Link className="button" to={btnLink}>
