@@ -14,7 +14,7 @@ const PStyle = styled.div`
 function PText({ children }) {
   console.log(children);
   return (
-    <PStyle>
+    <PStyle className="para">
       <p>{children}</p>
     </PStyle>
   );
