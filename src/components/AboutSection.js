@@ -4,6 +4,8 @@ import PText from './PText';
 import SectionTitle from './SectionTitle';
 import AboutImg from '../assets/images/about-sec-img.png';
 import styled from 'styled-components';
+import HeroImg from '../assets/images/hero-back.jpg';
+
 
 const AboutSectionStyle = styled.div`
   padding: 10rem 0;
@@ -85,7 +87,7 @@ function AboutSection(props) {
           </div>
         </div>
         <div className="about-section-right">
-          <img src={AboutImg} alt="about-image" />
+          <img src={HeroImg} alt="about-image" />
         </div>
       </div>
     </AboutSectionStyle>
