@@ -89,6 +89,7 @@ function ProjectsSection(props) {
                     img={project.img}
                     desc={project.desc}
                     live={project.liveURL}
+                    github={project.github}
                   />
                 </SwiperSlide>
               )
