@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroImg from '../assets/images/hero.png';
+import HeroImg from '../assets/images/hero-front-edited.jpg';
 import Button from './Button';
 import PText from './PText';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
@@ -40,6 +40,10 @@ const HeroStyles = styled.div`
   }
   .hero-info {
     margin-top: -18rem;
+    p {
+      color: var(--white);
+      text-shadow: 0 0 black;
+    }
   }
   .hero-social,
   .hero-scrollDown {
@@ -152,12 +156,12 @@ function HeroSection(props) {
             <span className="hero-name">Yarin Ordman</span>
           </h1>
           <div className="hero-img">
-            <img src={HeroImg} alt="" />
+            <img src={HeroImg} alt="Yarin's main image" />
           </div>
           <div className="hero-info">
             <PText>
               Im A Junior web developer with a lot of passion and thirst to
-              observe every piece of knowledge and experience I can.
+              observe every piece of knowledge and experience which can improve my abillities.
             </PText>
             <Button btnLink="/projects" btnText="See my works" />
           </div>

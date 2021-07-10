@@ -79,7 +79,12 @@ function AboutSection(props) {
         <div className="about-section-left">
           <SectionTitle heading="About Me" subHeading="Let me introduce myself" />
           <PText>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque nemo similique aliquid id, numquam maiores veniam. Eveniet aperiam, vitae, eligendi quos natus, commodi ratione possimus accusantium quod qui porro sapiente!
+            Hi There Everyone! :) <br />
+            My name is Yarin Ordman, 24 years old,<br /> living in moshav Adanim, Israel. <br />
+            I have passion for everything connected with computers, from hardware and games as a hobby to programming and software professionally.
+            I'm open minded and I have thirst for discovering new things and gain more experience.
+            I'm a real team player, I know how to handle criticism, listen to the opinion of others and express my own.
+            I believe in positive approach for life and waking up with a smile.
           </PText>
           <div className="about-section-buttons">
             <Button btnLink="/projects" btnText="Works" />

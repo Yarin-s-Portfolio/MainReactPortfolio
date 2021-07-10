@@ -1,46 +1,48 @@
 import { v4 as uuidv4 } from 'uuid';
 import ProjectImg from '../images/projectImg.png';
-import UTrackerImg from '../images/utracker.jpg';
-import GreenCtgImg from '../images/greenctg.jpg';
-import CoinTrackerImg from '../images/cointracker.jpg';
-import CavinImg from '../images/cavinimg.jpg';
+import DivingClubsImg from '../images/turtle.jpg';
+import CardWarGameImg from '../images/card-war-game.png';
+import MardiGrasImg from '../images/mardi-gras.png';
 
 const projects = [
   {
     id: uuidv4(),
-    name: 'U Tracker',
+    name: 'Diving Clubs',
     desc:
-      'An application to track your all data from one place. I developed the website and the mobile app',
-    img: UTrackerImg,
+      'An application to add and find diving clubs.',
+    img: DivingClubsImg,
+    liveURL: 'https://diving-clubs-by-yarin.netlify.app/'
   },
   {
     id: uuidv4(),
-    name: 'Green CTG',
+    name: 'Card-War-Game',
     desc:
-      'An app to help people to get an overview of how they can make the city beautiful.',
-    img: GreenCtgImg,
+      'The known Cards-War game.',
+    img: CardWarGameImg,
+    liveURL: 'https://card-war-game.netlify.app/'
   },
   {
     id: uuidv4(),
-    name: 'Coin Tracker',
+    name: 'Mardi-Gras',
     desc:
-      'Using this app you can track any e coin. Also you will get a good advise about investment form the professional',
-    img: CoinTrackerImg,
+      'Website to present the mardi gras festival',
+    img: MardiGrasImg,
+    liveURL: 'https://mardi-gras-by-yarin.netlify.app/'
   },
-  {
-    id: uuidv4(),
-    name: "Cavin's Portfolio",
-    desc:
-      'A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.',
-    img: CavinImg,
-  },
-  {
-    id: uuidv4(),
-    name: 'Tracking Soft',
-    desc:
-      'A tracking website that will show the performance of the website. Also you will get some useful advice to improve the performance.',
-    img: ProjectImg,
-  },
+  // {
+  //   id: uuidv4(),
+  //   name: "Cavin's Portfolio",
+  //   desc:
+  //     'A portfolio for Cavin jr. A artist from New york city. The portfolio is made using ReactJs and GatsbyJs.',
+  //   img: CavinImg,
+  // },
+  // {
+  //   id: uuidv4(),
+  //   name: 'Tracking Soft',
+  //   desc:
+  //     'A tracking website that will show the performance of the website. Also you will get some useful advice to improve the performance.',
+  //   img: ProjectImg,
+  // },
 ];
 
 export default projects;
