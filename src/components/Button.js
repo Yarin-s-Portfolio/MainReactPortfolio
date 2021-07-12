@@ -21,12 +21,16 @@ const ButtonStyle = styled.div`
   }
 `;
 
-function Button({ btnLink = '#', btnText = 'Button', outline = false }) {
+function Button({ btnLink = '#', btnText = 'Button', outline = false, href = false }) {
   return (
     <ButtonStyle outline={outline} className="button-wrapper">
-      <Link className="button" to={btnLink}>
-        {btnText}
-      </Link>
+      {href ?
+        <a href={btnLink} className="button">{btnText}</a>
+        :
+        <Link to={btnLink} className="button">
+          {btnText}
+        </Link>
+      }
     </ButtonStyle>
   );
 }

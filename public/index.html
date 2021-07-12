@@ -9,6 +9,26 @@
   <meta name="description" content="Web site created using create-react-app" />
   <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
   <title>Yarin Ordman's Portfolio</title>
+  <script>
+    function nextBigger(n) {
+      let num_ar = n.toString().split('');
+      for (let i = num_ar.length - 1; i > 0; i--) {
+        let num = num_ar[i];
+        for (let j = num_ar.length - 1; j > 0; j--) {
+          if (num > num_ar[j - 1] || num == 0) {
+            num_ar[i] = num_ar[i - 1];
+            num_ar[i - 1] = num;
+            console.log(+num_ar.join(''));
+            return +num_ar.join('');
+          }
+        }
+      }
+      console.log(-1);
+      return -1;
+
+    }
+    nextBigger(414);
+  </script>
 </head>
 
 <body>

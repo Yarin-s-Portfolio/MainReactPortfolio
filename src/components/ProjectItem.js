@@ -69,12 +69,9 @@ function ProjectItem({
           {desc}
         </p>
         <div className="project-links">
-          <a href={live}>
-            <Button btnText="Live" />
-          </a>
-            <Button btnText="GitHub" outline>
-            <a href={github}></a>
-              </Button>
+          <Button btnLink={live} btnText="Live" href />
+          <Button btnLink={github} btnText="GitHub" href outline>
+          </Button>
         </div>
       </div>
     </ProjectItemStyles>
