@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/Projects" component={Projects} />
           <Route path="/Contact" component={Contact} />
         </Switch>
+        <Footer />
       </Router>
     </>
   );
