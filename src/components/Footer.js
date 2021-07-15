@@ -29,6 +29,7 @@ const FooterStyles = styled.div`
       padding: 1rem 0;
       margin-top: 5rem;
       .para {
+        max-width: 700px;
         margin-left: 0;
       }
     }
