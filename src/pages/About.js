@@ -4,6 +4,7 @@ import PText from '../components/PText';
 import AboutImg from '../assets/images/about-page-img.png';
 import styled from 'styled-components';
 import AboutInfoItem from '../components/AboutInfoItem';
+import ContactBanner from '../components/ContactBanner';
 
 
 const AboutPageStyles = styled.div`
@@ -123,10 +124,10 @@ function About(props) {
               title="Back-End"
               items={['Node.js', 'Express.js', 'MongoDb']}
             />
-
           </div>
         </div>
       </div>
+      <ContactBanner />
     </AboutPageStyles>
   );
 }

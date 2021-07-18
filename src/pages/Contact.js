@@ -1,9 +1,12 @@
 import React from 'react';
+import ContactSection from '../components/ContactSection';
+import Map from '../components/Map';
 
 function Contact(props) {
   return (
     <div>
-      <h1>Contact work</h1>
+      <ContactSection />
+      <Map />
     </div>
   );
 }
