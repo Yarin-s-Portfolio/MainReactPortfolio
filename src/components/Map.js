@@ -5,7 +5,7 @@ import MapImg from '../assets/images/map.png'
 
 const MapStyles = styled.div`
   background: url(${MapImg}) no-repeat center / cover;
-  min-height: 400px;
+  min-height: 700px;
   .container {
     position: relative;
     min-height: 400px;
@@ -13,7 +13,7 @@ const MapStyles = styled.div`
   .map-card {
     position: absolute;
     right: 0;
-    top: 25%;
+    top: 50%;
     padding: 2rem;
     background: var(--deep-dark);
     width: 100%;
