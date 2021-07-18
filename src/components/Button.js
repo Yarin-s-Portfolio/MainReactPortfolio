@@ -25,7 +25,7 @@ function Button({ btnLink = '#', btnText = 'Button', outline = false, href = fal
   return (
     <ButtonStyle outline={outline} className="button-wrapper">
       {href ?
-        <a href={btnLink} className="button">{btnText}</a>
+        <a href={btnLink} className="button" target="_blank">{btnText}</a>
         :
         <Link to={btnLink} className="button">
           {btnText}

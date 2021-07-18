@@ -56,7 +56,10 @@ function ProjectItem({
 }) {
   return (
     <ProjectItemStyles>
-      <a href={live} className='project-item-img'>
+      <a href={live}
+        className='project-item-img'
+        target="_blank"
+      >
         <img src={img} alt="project img" />
       </a>
       <div className="project-item-info">
