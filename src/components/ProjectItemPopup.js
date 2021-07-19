@@ -1,54 +1,132 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import ProjectsInfo from '../assets/data/projects';
+import PText from './PText';
+import SectionTitle from './SectionTitle';
+import { RiCheckboxCircleFill } from 'react-icons/ri'
 
 
 const PopupStyles = styled.div`
-  .popupWrapper {
-      background-color: rgba(0, 0, 0, 0.5);
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      display: ${props => props.isClicked ? 'block' : 'none'};
-      color: var(--grasy-1);
-    }
+  z-index: 99999;
+  background-color: var(--gray-1);
+  position: fixed;
+  top: 50%;
+  left: auto;
+  right: 5%;
+  width: 90vw;
+  height: 90vh;
+  display: ${props => props.trigger ? 'flex' : 'none'};
+  color: var(--white);
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
     
-    .popup {
-      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  .popupContent {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    padding: 3rem;
+    background-color: var(--deep-dark);
+    border-radius: 8px;
+    position: relative;
+    .heading {
       text-align: center;
-      width: 100%;
-      max-width: 300px;
-      margin: 10% auto;
-      padding: 20px;
-      background-color: var(--deep-dark);
-      position: relative;
+    }
+    .description {
+      display: flex;
+      justify-content: flex-start;
+      .left {
+        flex: 3;
+        .para {
+          margin: 0;
+        }
+      }
+      .right {
+        flex: 1;
+        text-align: start;
+        font-size: 1rem;
+        svg {
+          width: 1.5rem;
+        }
+        .ul {
+          .li {
+          }
+        }
+        .para {
+          margin: 0;
+          line-height: 4rem;
+        }
+      }
+    }
+    .right::before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 70%;
+    background-color: var(--gray-1);
+    right: 30%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    }
   }
 
   .popupClose {
       position: absolute;
+      font-size: 3rem;
       top: 5px;
-      right: 8px;
+      right: 15px;
       cursor: pointer;
   }
 `;
 
-function ProjectItemPopup({ isClicked = false }) {
+function ProjectItemPopup({ trigger, name, getPopupByName }) {
+  let [toggle, setToggle] = useState(trigger);
+  console.log(trigger);
+  console.log(toggle);
+  let [project, setProject] = useState(ProjectsInfo);
 
-  let [toggle, setToggle] = useState(isClicked);
+  useEffect(() => {
+    setToggle(trigger);
+  }, [trigger])
+
+  useEffect(() => {
+    getProject();
+    console.log(project);
+  }, [name])
+
+  const getProject = () => {
+    setProject(() => (
+      ProjectsInfo.filter(item => (
+        item.name.toLowerCase().match(name.toLowerCase())
+      ))
+    ))
+  }
 
   return (
-    <PopupStyles isClicked={toggle}>
-      <div className="container">
-        <div className="popupWrapper">
-          <div className="popup">
-            <div onClick={() => setToggle(!toggle)} className="popupClose">X</div>
-            <div className="popupContent">
-              sss
+    <PopupStyles trigger={toggle} className="popupWrapper">
+      {project.map(item => (
+        <div className="popupContent" key={item.id}>
+          <div onClick={() => getPopupByName(item.name, false)} className="popupClose">X</div>
+          <div className="heading">
+            <SectionTitle heading={item.name} subHeading="About" />
+          </div>
+          <div className="description">
+            <div className="left">
+              <PText>{item.fullDesc}</PText>
+            </div>
+            <div className="right">
+              <PText>
+                <ul>
+                  {item.usedLanguage?.map((item, i) => (
+                    <li key={i}><RiCheckboxCircleFill /> {item}</li>
+                  ))}
+                </ul>
+              </PText>
             </div>
           </div>
         </div>
-      </div>
+      ))}
     </PopupStyles>
   )
 }

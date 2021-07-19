@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import projectImg from '../assets/images/projectImg.png';
 import Button from './Button';
-import 'reactjs-popup/dist/index.css';
+import ProjectItemPopup from './ProjectItemPopup';
 
 const ProjectItemStyles = styled.div`
   .project-item-img {
@@ -12,6 +12,7 @@ const ProjectItemStyles = styled.div`
     border-radius: 12px;
     display: inline-block;
     border: 3px solid var(--gray-2);
+    cursor: pointer;
     img {
       height: 100%;
     }
@@ -50,34 +51,37 @@ const ProjectItemStyles = styled.div`
 function ProjectItem({
   img = projectImg,
   title = 'Project Name',
-  desc = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, officia.',
+  desc = 'Project Description.',
   live = '#',
-  github = '#'
+  github = '#',
+  trigger = false,
+  getPopupByName
 }) {
+
+  // let [toggle, setToggle] = useState(trigger);
+  // console.log(toggle);
+
   return (
-      <ProjectItemStyles>
-        <a href="#"
-          className='project-item-img'
-          target="_blank"
-        >
-          <img src={img} alt="project img" />
+    <ProjectItemStyles>
+      <div onClick={() => getPopupByName(title, true)} className='project-item-img'>
+        <img src={img} alt="project img" />
+      </div>
+      <div className="project-item-info">
+        <a href={live}>
+          <h3 className='project-item-title'>
+            {title}
+          </h3>
         </a>
-        <div className="project-item-info">
-          <a href={live}>
-            <h3 className='project-item-title'>
-              {title}
-            </h3>
-          </a>
-          <p className='project-item-desc'>
-            {desc}
-          </p>
-          <div className="project-links">
-            <Button btnLink={live} btnText="Live" href />
-            <Button btnLink={github} btnText="GitHub" href outline>
-            </Button>
-          </div>
+        <p className='project-item-desc'>
+          {desc}
+        </p>
+        <div className="project-links">
+          <Button btnLink={live} btnText="Live" href />
+          <Button btnLink={github} btnText="GitHub" href outline>
+          </Button>
         </div>
-      </ProjectItemStyles>
+      </div>
+    </ProjectItemStyles >
   )
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper';
 import SectionTitle from './SectionTitle';
@@ -6,11 +6,13 @@ import projects from '../assets/data/projects';
 import ProjectItem from './ProjectItem';
 import styled from 'styled-components';
 import 'swiper/swiper-bundle.min.css';
+import ProjectItemPopup from './ProjectItemPopup';
 
 SwiperCore.use([Navigation]);
 
 const ProjectSectionStyles = styled.div`
   padding: 10rem 0;
+  position: relative;
   .projects-all-items {
     display: flex;
     gap: 3rem;
@@ -56,9 +58,20 @@ const ProjectSectionStyles = styled.div`
 `;
 
 function ProjectsSection(props) {
+
+  let [name, setName] = useState('name');
+  let [toggle, setToggle] = useState(null);
+
+
+  const getPopupByName = (_title, toggle) => {
+    setName(_title)
+    setToggle(toggle)
+  }
+
   return (
     <ProjectSectionStyles>
       <div className="container">
+        <ProjectItemPopup getPopupByName={getPopupByName} trigger={toggle} name={name} />
         <SectionTitle heading='Projects' subHeading="some of my recent projects" />
         <div className="projects-all-items">
           <Swiper
@@ -85,11 +98,13 @@ function ProjectsSection(props) {
               return (
                 <SwiperSlide key={project.id}>
                   <ProjectItem
+                    id={project.id}
                     title={project.name}
                     img={project.img}
                     desc={project.desc}
                     live={project.liveURL}
                     github={project.github}
+                    getPopupByName={getPopupByName}
                   />
                 </SwiperSlide>
               )
