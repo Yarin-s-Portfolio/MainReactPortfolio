@@ -58,9 +58,6 @@ function ProjectItem({
   getPopupByName
 }) {
 
-  // let [toggle, setToggle] = useState(trigger);
-  // console.log(toggle);
-
   return (
     <ProjectItemStyles>
       <div onClick={() => getPopupByName(title, true)} className='project-item-img'>

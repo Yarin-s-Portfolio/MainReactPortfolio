@@ -34,12 +34,14 @@ const PopupStyles = styled.div`
       text-align: center;
     }
     .description {
+      margin-top: 2rem;
       display: flex;
       justify-content: flex-start;
       .left {
         flex: 3;
+        text-align: center;
         .para {
-          margin: 0;
+          margin: 0 auto;
         }
       }
       .right {
@@ -63,7 +65,7 @@ const PopupStyles = styled.div`
     position: absolute;
     content: '';
     width: 2px;
-    height: 70%;
+    height: 60%;
     background-color: var(--gray-1);
     right: 30%;
     top: 55%;

@@ -1,5 +1,4 @@
 import { v4 as uuidv4 } from 'uuid';
-import ProjectImg from '../images/projectImg.png';
 import DivingClubsImg from '../images/turtle.jpg';
 import CardWarGameImg from '../images/card-war-game.png';
 import MardiGrasImg from '../images/mardi-gras.png';
