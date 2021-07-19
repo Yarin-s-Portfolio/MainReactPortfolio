@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import projectImg from '../assets/images/projectImg.png';
 import Button from './Button';
+import 'reactjs-popup/dist/index.css';
 
 const ProjectItemStyles = styled.div`
   .project-item-img {
@@ -55,29 +55,29 @@ function ProjectItem({
   github = '#'
 }) {
   return (
-    <ProjectItemStyles>
-      <a href={live}
-        className='project-item-img'
-        target="_blank"
-      >
-        <img src={img} alt="project img" />
-      </a>
-      <div className="project-item-info">
-        <a href={live}>
-          <h3 className='project-item-title'>
-            {title}
-          </h3>
+      <ProjectItemStyles>
+        <a href="#"
+          className='project-item-img'
+          target="_blank"
+        >
+          <img src={img} alt="project img" />
         </a>
-        <p className='project-item-desc'>
-          {desc}
-        </p>
-        <div className="project-links">
-          <Button btnLink={live} btnText="Live" href />
-          <Button btnLink={github} btnText="GitHub" href outline>
-          </Button>
+        <div className="project-item-info">
+          <a href={live}>
+            <h3 className='project-item-title'>
+              {title}
+            </h3>
+          </a>
+          <p className='project-item-desc'>
+            {desc}
+          </p>
+          <div className="project-links">
+            <Button btnLink={live} btnText="Live" href />
+            <Button btnLink={github} btnText="GitHub" href outline>
+            </Button>
+          </div>
         </div>
-      </div>
-    </ProjectItemStyles>
+      </ProjectItemStyles>
   )
 }
 

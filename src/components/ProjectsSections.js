@@ -81,7 +81,7 @@ function ProjectsSection(props) {
             }
           >
             {projects.map((project, i) => {
-              if (i >= 5) return;
+              if (i >= 3) return;
               return (
                 <SwiperSlide key={project.id}>
                   <ProjectItem
