@@ -3,10 +3,14 @@ import { MdEmail, MdLocalPhone } from 'react-icons/md';
 import styled from 'styled-components';
 import ContactForm from './ContactForm';
 import ContactInfoItem from './ContactInfoItem';
+import Map from './Map';
 import SectionTitle from './SectionTitle';
 
 const ContactStyles = styled.div`
   padding: 10rem 0;
+  .container {
+    margin-bottom: 2rem;
+  }
   .contact-wrapper {
     display: flex;
     gap: 5rem;
@@ -51,13 +55,13 @@ const ContactStyles = styled.div`
 
 function ContactSection(props) {
   return (
-    <ContactStyles>
+    <ContactStyles id="contact">
       <div className="container">
         <SectionTitle heading="Contact" subHeading="Get in touch" />
         <div className="contact-wrapper">
           <div className="left">
-            <ContactInfoItem icon={<MdLocalPhone />} text="+972 50-889-6251" />
-            <ContactInfoItem icon={<MdEmail />} text="YarinWebDev@gmail.com" />
+            <ContactInfoItem icon={<MdLocalPhone />} text="+972 50-889-6251" path="tel:" />
+            <ContactInfoItem icon={<MdEmail />} text="YarinWebDev@gmail.com" path="mailto:" />
             <ContactInfoItem text="Moshav Adanim, 1, Israel" />
           </div>
           <div className="right">
@@ -65,6 +69,7 @@ function ContactSection(props) {
           </div>
         </div>
       </div>
+      <Map />
     </ContactStyles>
   )
 }

@@ -41,6 +41,8 @@ const PopupStyles = styled.div`
         flex: 3;
         text-align: center;
         .para {
+          border-radius: 12px;
+          background-color: #8080801d;
           margin: 0 auto;
         }
       }
@@ -84,8 +86,6 @@ const PopupStyles = styled.div`
 
 function ProjectItemPopup({ trigger, name, getPopupByName }) {
   let [toggle, setToggle] = useState(trigger);
-  console.log(trigger);
-  console.log(toggle);
   let [project, setProject] = useState(ProjectsInfo);
 
   useEffect(() => {
@@ -94,7 +94,6 @@ function ProjectItemPopup({ trigger, name, getPopupByName }) {
 
   useEffect(() => {
     getProject();
-    console.log(project);
   }, [name])
 
   const getProject = () => {

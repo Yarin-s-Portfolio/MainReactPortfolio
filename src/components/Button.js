@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 
 const ButtonStyle = styled.div`
@@ -27,7 +27,7 @@ function Button({ btnLink = '#', btnText = 'Button', outline = false, href = fal
       {href ?
         <a href={btnLink} className="button" target="_blank">{btnText}</a>
         :
-        <Link to={btnLink} className="button">
+        <Link to={btnLink} smooth className="button">
           {btnText}
         </Link>
       }

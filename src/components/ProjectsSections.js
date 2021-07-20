@@ -69,7 +69,7 @@ function ProjectsSection(props) {
   }
 
   return (
-    <ProjectSectionStyles>
+    <ProjectSectionStyles id="projects">
       <div className="container">
         <ProjectItemPopup getPopupByName={getPopupByName} trigger={toggle} name={name} />
         <SectionTitle heading='Projects' subHeading="some of my recent projects" />
@@ -94,7 +94,7 @@ function ProjectsSection(props) {
             }
           >
             {projects.map((project, i) => {
-              if (i >= 3) return;
+              if (i >= 4) return;
               return (
                 <SwiperSlide key={project.id}>
                   <ProjectItem

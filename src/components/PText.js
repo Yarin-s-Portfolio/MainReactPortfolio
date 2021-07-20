@@ -12,7 +12,6 @@ const PStyle = styled.div`
 `;
 
 function PText({ children }) {
-  console.log(children);
   return (
     <PStyle className="para">
       <p>{children}</p>

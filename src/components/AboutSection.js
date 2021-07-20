@@ -5,6 +5,8 @@ import SectionTitle from './SectionTitle';
 import styled from 'styled-components';
 import HeroImg from '../assets/images/hero-back.jpg';
 import About from '../pages/About';
+import AboutInfoItem from '../components/AboutInfoItem';
+import PaperPlane from '../assets/images/paper-plane.png';
 
 
 const AboutSectionStyle = styled.div`
@@ -72,11 +74,63 @@ const AboutSectionStyle = styled.div`
     }
   }
 `;
-
+const AboutPageStyles = styled.div`
+position: relative;
+  .about-info {
+    margin-bottom: 4rem;
+    .para {
+      max-width: 100%;
+    }
+  }
+  .paper-plane-img {
+    position: absolute;
+    right: 15rem;
+    img {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+  .about-info-items {
+    /* margin-top: 15rem; */
+  }
+  .about-info-item {
+    margin-bottom: 10rem;
+  }
+  .about-info-heading {
+    font-size: 3.6rem;
+    text-transform: uppercase;
+  }
+  @media only screen and (max-width: 1200px) {
+    .paper-plane-img {
+      top: 30rem;
+      right: 15rem;
+      img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .about-info-items {
+      margin-top: 10rem;
+    }
+    .about-info-heading {
+      font-size: 3rem;
+    }
+    .paper-plane-img {
+      top: 50rem;
+      right: auto;
+      img {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+   }
+`;
 function AboutSection(props) {
   return (
     <>
-      <AboutSectionStyle>
+      <AboutSectionStyle id="about">
         <div className="container">
           <div className="about-section-left">
             <SectionTitle heading="About Me" subHeading="Let me introduce myself" />
@@ -89,8 +143,8 @@ function AboutSection(props) {
               I believe in positive approach for life and waking up with a smile.
             </PText>
             <div className="about-section-buttons">
-              <Button btnLink="/projects" btnText="Works" />
-              <Button btnLink="/about" btnText="Read More" outline />
+              <Button btnLink="#projects" btnText="Works" />
+              <Button btnLink="/about" btnText="Download CV" outline />
             </div>
           </div>
           <div className="about-section-right">

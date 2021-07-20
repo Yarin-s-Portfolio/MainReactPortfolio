@@ -64,7 +64,7 @@ function Footer(props) {
             Yarin Ordman
           </h1>
           <PText>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor porro neque dolorem vel quisquam doloribus incidunt ipsam perferendis ducimus deserunt.
+            Full-Stack Web Developer
           </PText>
         </div>
         <div className="footer-col2">

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import projectImg from '../assets/images/projectImg.png';
+import projectImg from '../assets/images/projectImg.jpg';
 import Button from './Button';
-import ProjectItemPopup from './ProjectItemPopup';
 
 const ProjectItemStyles = styled.div`
   .project-item-img {
