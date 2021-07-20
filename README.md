@@ -1,3 +1,2 @@
-# React Portfolio website
+<h1>Yarin Ordman Portfolio</h1>
 
-![](./assets/images/portfolio-img.png)

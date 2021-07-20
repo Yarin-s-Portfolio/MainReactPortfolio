@@ -1,7 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import projectImg from '../assets/images/projectImg.png';
+import projectImg from '../assets/images/projectImg.jpg';
 import Button from './Button';
 
 const ProjectItemStyles = styled.div`
@@ -12,6 +11,7 @@ const ProjectItemStyles = styled.div`
     border-radius: 12px;
     display: inline-block;
     border: 3px solid var(--gray-2);
+    cursor: pointer;
     img {
       height: 100%;
     }
@@ -50,15 +50,18 @@ const ProjectItemStyles = styled.div`
 function ProjectItem({
   img = projectImg,
   title = 'Project Name',
-  desc = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, officia.',
+  desc = 'Project Description.',
   live = '#',
-  github = '#'
+  github = '#',
+  trigger = false,
+  getPopupByName
 }) {
+
   return (
     <ProjectItemStyles>
-      <a href={live} className='project-item-img'>
+      <div onClick={() => getPopupByName(title, true)} className='project-item-img'>
         <img src={img} alt="project img" />
-      </a>
+      </div>
       <div className="project-item-info">
         <a href={live}>
           <h3 className='project-item-title'>
@@ -74,7 +77,7 @@ function ProjectItem({
           </Button>
         </div>
       </div>
-    </ProjectItemStyles>
+    </ProjectItemStyles >
   )
 }
 

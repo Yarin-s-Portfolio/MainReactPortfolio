@@ -163,7 +163,7 @@ function HeroSection(props) {
               Im A Junior web developer with a lot of passion and thirst to
               observe every piece of knowledge and experience which can improve my abillities.
             </PText>
-            <Button btnLink="/projects" btnText="See my works" />
+            <Button btnLink="#projects" btnText="See my works" />
           </div>
           <div className="hero-social">
             <div className="hero-social-indicator">

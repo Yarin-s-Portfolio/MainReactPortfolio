@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import { MdMenu, MdClose } from 'react-icons/md';
 
@@ -104,55 +104,44 @@ function NavMenu() {
         <div
           className="closeNavIcon"
           onClick={() => setShowNav(!showNav)}
-          role="button"
-          onKeyDown={() => setShowNav(!showNav)}
-          tabIndex={0}
         >
           <MdClose />
         </div>
         <li>
-          <NavLink
-            to="/"
+          <Link
+            to="#"
+            smooth
             onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
           >
             Home
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink
-            to="/about"
+          <Link
+            to="#about"
+            smooth
             onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
           >
             About
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink
-            to="/projects"
+          <Link
+            to="#projects"
+            smooth
             onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
           >
             Projects
-          </NavLink>
+          </Link>
         </li>
         <li>
-          <NavLink
-            to="/contact"
+          <Link
+            to="#contact"
+            smooth
             onClick={() => setShowNav(!showNav)}
-            role="button"
-            onKeyDown={() => setShowNav(!showNav)}
-            tabIndex={0}
           >
             Contact
-          </NavLink>
+          </Link>
         </li>
       </ul>
     </NavMenuStyles>
