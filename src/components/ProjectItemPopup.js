@@ -10,7 +10,7 @@ const PopupStyles = styled.div`
   z-index: 99999;
   background-color: var(--gray-1);
   position: fixed;
-  top: 50%;
+  top: 7%;
   left: auto;
   right: 5%;
   width: 90vw;
