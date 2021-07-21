@@ -13,6 +13,8 @@ SwiperCore.use([Navigation]);
 const ProjectSectionStyles = styled.div`
   padding: 10rem 0;
   position: relative;
+  /* height: 100%;
+  min-height: 500px; */
   .projects-all-items {
     display: flex;
     gap: 3rem;

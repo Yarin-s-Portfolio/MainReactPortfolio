@@ -29,6 +29,7 @@ const ProjectItemStyles = styled.div`
     font-size: 1.6rem;
     font-family: 'RobotoMono Regular';
     margin-top: 1rem;
+    height: 4rem;
   }
   .project-links {
     display: flex;
@@ -73,8 +74,7 @@ function ProjectItem({
         </p>
         <div className="project-links">
           <Button btnLink={live} btnText="Live" href />
-          <Button btnLink={github} btnText="GitHub" href outline>
-          </Button>
+          <Button btnLink={github} btnText="GitHub" href outline />
         </div>
       </div>
     </ProjectItemStyles >
