@@ -74,7 +74,7 @@ function ProjectsSection(props) {
     <ProjectSectionStyles id="projects">
       <div className="container">
         <ProjectItemPopup getPopupByName={getPopupByName} trigger={toggle} name={name} />
-        <SectionTitle heading='Projects' subHeading="some of my recent projects" />
+        <SectionTitle heading='Projects' subHeading="Some of my recent projects" />
         <div className="projects-all-items">
           <Swiper
             spaceBetween={30}

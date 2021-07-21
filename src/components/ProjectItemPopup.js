@@ -53,10 +53,6 @@ const PopupStyles = styled.div`
         svg {
           width: 1.5rem;
         }
-        .ul {
-          .li {
-          }
-        }
         .para {
           margin: 0;
           line-height: 4rem;
@@ -82,6 +78,60 @@ const PopupStyles = styled.div`
       right: 15px;
       cursor: pointer;
   }
+  @media only screen and (max-width: 1200px) {
+    .description {
+      flex-direction: column;
+    }
+    .left {
+      .para {
+        font-size: 1.5rem;
+        width: 100%;
+      }
+    }
+    .right {
+      margin: 0 auto;
+      ul {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        li {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .right::before {
+       display: none;
+     }
+  }
+  @media only screen and (max-width: 768px) {
+    .description {
+        flex-direction: column;
+      .left {
+        .para {
+          font-size: 1.2rem;
+          width: 100%;
+        }
+      }
+      .right {
+          ul {
+            line-height: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 1rem;
+            justify-content: center;
+            align-items: center;
+            li {
+              font-size: 1.3rem;
+            }
+          }
+      }
+      .right::before {
+        display: none;
+      }
+    }
+  }
+
 `;
 
 function ProjectItemPopup({ trigger, name, getPopupByName }) {

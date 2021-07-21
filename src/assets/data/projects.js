@@ -46,7 +46,7 @@ const projects = [
                 I have learned a lot of grid and flex layout, how to build responsive components,
                 Make an api request and etc...
                 This project got and A score and good response from the lecturer.`,
-    usedLanguage: ['HTML', 'CSS/Sass', 'Vanilla & jQuery', 'API request for weather'],
+    usedLanguage: ['HTML', 'CSS/Sass', 'Vanilla & jQuery', 'API request'],
     img: MardiGrasImg,
     liveURL: 'https://mardi-gras-by-yarin.netlify.app/',
     github: 'https://github.com/Mardi-Gras/Mardi-Gras'

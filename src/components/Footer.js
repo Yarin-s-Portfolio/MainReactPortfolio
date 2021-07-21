@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import FooterCol from './FooterCol';
 import PText from './PText';
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 
 const FooterStyles = styled.div`
@@ -9,7 +10,7 @@ const FooterStyles = styled.div`
     background-color: var(--deep-dark);
     .container {
       display: flex;
-      gap: 2rem;
+      gap: 4rem;
     }
     .footer-col1 {
       flex: 2;
@@ -17,7 +18,9 @@ const FooterStyles = styled.div`
     .footer-col2,
     .footer-col3,
     .footer-col4 {
-      flex: 1;
+      flex: 2;
+    }
+    .footer-col4 {
     }
     .footer-col1-title {
       font-size: 3.3rem;
@@ -103,8 +106,8 @@ function Footer(props) {
                 path: 'tel:+972508896251'
               },
               {
-                title: 'YarinOrdman@gmail.com',
-                path: 'mailto:yarinordman@gmail.com'
+                title: 'YarinWebDev@gmail.com',
+                path: 'mailto:yarinwebdev@gmail.com'
               }
             ]}
           />
@@ -114,15 +117,15 @@ function Footer(props) {
             heading="Social Links"
             links={[
               {
-                title: 'Facebook',
+                title: <FaFacebook />,
                 path: 'https://www.facebook.com/yarin.ordman'
               },
               {
-                title: 'LinkedIn',
-                path: 'https://www.linkedin.com/in/yarin-ordman-847a33202'
+                title: <FaLinkedin />,
+                path: 'https://www.linkedin.com/in/yarin-ordman-847a33202',
               },
               {
-                title: 'Instagram',
+                title: <FaInstagram />,
                 path: 'https://www.instagram.com/yarin_ordman'
               },
             ]}

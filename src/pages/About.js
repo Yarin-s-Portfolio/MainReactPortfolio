@@ -84,7 +84,11 @@ function About(props) {
             />
             <AboutInfoItem
               title="Back-End"
-              items={['Node.js', 'Express.js', 'MongoDb']}
+              items={['Node.js', 'Express.js']}
+            />
+            <AboutInfoItem
+              title="Databases"
+              items={['mySql', 'MongoDb']}
             />
           </div>
         </div>

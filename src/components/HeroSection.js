@@ -152,7 +152,7 @@ function HeroSection(props) {
       <div className="hero">
         <div className="container">
           <h1 className="hero-heading">
-            <span>Hello, This is</span>
+            <span>Hello, I'm</span>
             <span className="hero-name">Yarin Ordman</span>
           </h1>
           <div className="hero-img">
@@ -160,7 +160,7 @@ function HeroSection(props) {
           </div>
           <div className="hero-info">
             <PText>
-              Im A Junior web developer with a lot of passion and thirst to
+              Im a junior web developer with a lot of passion and thirst to
               observe every piece of knowledge and experience which can improve my abillities.
             </PText>
             <Button btnLink="#projects" btnText="See my works" />
