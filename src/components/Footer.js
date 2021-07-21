@@ -10,6 +10,7 @@ const FooterStyles = styled.div`
     background-color: var(--deep-dark);
     .container {
       display: flex;
+      text-align: center;
       gap: 4rem;
     }
     .footer-col1 {

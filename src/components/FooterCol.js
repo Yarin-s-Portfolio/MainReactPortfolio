@@ -3,7 +3,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 
 const ColStyles = styled.div`
-    text-align: center;
   .heading {
     font-size: 2.5rem;
     margin-bottom: 2rem;
