@@ -24,9 +24,9 @@ const PopupStyles = styled.div`
   .popupContent {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     text-align: center;
-    width: 80%;
-    height: 80%;
-    padding: 3rem;
+    width: 90%;
+    height: 90%;
+    padding: 2rem;
     background-color: var(--deep-dark);
     border-radius: 8px;
     position: relative;
@@ -109,7 +109,7 @@ const PopupStyles = styled.div`
         flex-direction: column;
       .left {
         .para {
-          font-size: 1.2rem;
+          font-size: 1.3rem;
           width: 100%;
         }
       }
