@@ -144,7 +144,7 @@ function AboutSection(props) {
             </PText>
             <div className="about-section-buttons">
               <Button btnLink="#projects" btnText="Works" />
-              <Button btnLink="https://easyupload.io/qijvbe" btnText="Download CV" outline href />
+              <Button btnLink="https://easyupload.io/nve1z5" btnText="Download CV" outline href />
             </div>
           </div>
           <div className="about-section-right">
