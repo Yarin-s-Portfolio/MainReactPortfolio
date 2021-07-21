@@ -76,22 +76,22 @@ function Footer(props) {
             links={[
               {
                 title: "Home",
-                path: '/',
+                path: '#',
                 type: 'Link'
               },
               {
                 title: "About",
-                path: '/about',
+                path: '#about',
                 type: 'Link'
               },
               {
                 title: "Projects",
-                path: '/projects',
+                path: '#projects',
                 type: 'Link'
               },
               {
                 title: "Contact",
-                path: '/contact',
+                path: '#contact',
                 type: 'Link'
               },
             ]}

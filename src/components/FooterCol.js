@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 
 const ColStyles = styled.div`
@@ -43,7 +43,7 @@ function FooterCol({
             <li key={i}>
               {item.type === 'Link'
                 ?
-                <Link to={item.path}>{item.title}</Link>
+                <Link smooth to={item.path}>{item.title}</Link>
                 :
                 <a href={item.path} target='_blank' rel='noreferrer'>{item.title}</a>
               }
